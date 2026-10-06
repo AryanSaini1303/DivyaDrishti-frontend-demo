@@ -89,7 +89,7 @@ export default function Home() {
     <main className={styles.main}>
       <header className={styles.header}>
         <div className={styles.wordmark}>Divya Drishti</div>
-        <div className={styles.industries}>
+        {/* <div className={styles.industries}>
           {Object.keys(INDUSTRY_COLORS).map((key) => {
             const isActive = industry === key;
             return (
@@ -103,7 +103,7 @@ export default function Home() {
               </button>
             );
           })}
-        </div>
+        </div> */}
       </header>
 
       <div className={styles.stage}>
