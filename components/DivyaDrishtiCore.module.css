@@ -1,0 +1,13 @@
+.container {
+  position: absolute;
+  width: 150%;
+  height: 110%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+}

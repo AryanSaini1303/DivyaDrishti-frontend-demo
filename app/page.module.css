@@ -1,0 +1,237 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: #050806;
+  display: flex;
+  flex-direction: column;
+  background-image:
+    linear-gradient(rgba(74, 242, 161, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 242, 161, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  flex-shrink: 0;
+}
+
+.wordmark {
+  font-family: "JetBrains Mono", monospace;
+  color: #4af2a1;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.industries {
+  display: flex;
+  gap: 8px;
+}
+
+.industryBtn {
+  background: transparent;
+  border: 1px solid #1f5c3f;
+  color: #cfeedd;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, opacity 0.2s;
+  opacity: 0.7;
+}
+
+.industryBtn:hover {
+  opacity: 1;
+}
+
+.industryBtnActive {
+  opacity: 1;
+}
+
+.stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 32px;
+  min-height: 0;
+}
+
+.chartColumn {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+.coreWrapper {
+  width: min(68vmin, 70vh);
+  height: min(68vmin, 70vh);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.captionBar {
+  min-height: 56px;
+  max-height: 110px;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 40px;
+  flex-shrink: 0;
+}
+
+.transcript {
+  color: #cfeedd;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lastUtterance {
+  color: #4af2a1;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  opacity: 0.7;
+  padding-bottom: 6px;
+}
+
+.answerButtonRow {
+  display: flex;
+  justify-content: center;
+  height: 32px; /* fixed and always reserved — this is what stops the button
+                   appearing/disappearing from shifting anything above or below it */
+  flex-shrink: 0;
+}
+
+.fullAnswerBtn {
+  background: transparent;
+  border: 1px solid #1f5c3f;
+  color: rgba(207, 238, 221, 0.4);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  padding: 4px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.fullAnswerBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.fullAnswerBtn:not(:disabled):hover {
+  color: #4af2a1;
+  border-color: #4af2a1;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 32px;
+  flex-shrink: 0;
+}
+
+.micButton {
+  background: rgba(74, 242, 161, 0.1);
+  border: 1px solid #4af2a1;
+  color: #4af2a1;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  padding: 12px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.micButton:hover {
+  opacity: 0.85;
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typeInsteadBtn {
+  background: transparent;
+  border: 1px solid #1f5c3f;
+  color: #cfeedd;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.typeInsteadBtn:hover {
+  opacity: 1;
+  border-color: #4af2a1;
+}
+
+.textInputForm {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: min(480px, 90vw);
+}
+
+.textInput {
+  flex: 1;
+  background: #0a140e;
+  border: 1px solid #1f5c3f;
+  color: #cfeedd;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.textInput:focus {
+  border-color: #4af2a1;
+}
+
+.textSubmitBtn,
+.textCancelBtn {
+  background: transparent;
+  border: 1px solid #1f5c3f;
+  color: #cfeedd;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.textSubmitBtn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.textSubmitBtn:not(:disabled):hover,
+.textCancelBtn:hover {
+  border-color: #4af2a1;
+  color: #4af2a1;
+}
+
+.typeInsteadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:13px 19.5px;
+}
